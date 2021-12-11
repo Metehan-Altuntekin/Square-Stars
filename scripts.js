@@ -1,25 +1,9 @@
-class Square {        //Object class for squares
-  constructor() {
-    this.style = {
-      width: "5px",
-      height: "5px",
-      display: "inline-block",
-      position: "absolute",
-      left: RandomPercentage(),
-      top: RandomPercentage(),
-      backgroundColor: "#" + RandomHex(3)
-
-    }
-
-  }
-}
-
 function RandomHex(size) {             //Create a random hexadecimal for requested size
   let a = [];
   for (let i = 0; i < size; i++) {
     a.push(Math.floor(Math.random() * 16).toString(16));
   }
-  let result = "";
+  let result = "#";
   for (let i = 0; i < a.length; i++) {
     result += a[i];
   }
@@ -31,16 +15,23 @@ function RandomPercentage() {
   return (a + "%")
 }
 
-const squares = [];
-for (let i = 0; i < 30; i++) {
-  let a = new Square();
-  squares.push(a)
+function CreateSquare() {
+  const zone = document.getElementById("animation-zone");
+  const square = document.createElement("div");
+
+  square.style.backgroundColor = RandomHex(3);
+  square.style.top = RandomPercentage();
+  square.style.left = RandomPercentage();
+
+  console.log(square.style.backgroundColor);
+  console.log(square.style.top);
+  console.log(square.style.left);
+  
+  zone.appendChild(square);
+
+  setTimeout(() => {
+    square.remove();
+  }, 5000)
 }
 
-for (let i = 0; i < squares.length; i++) {
-  let a = "";
-  a += '<div class="squares" id="square' + i + '"></div>'
-  for (let x in squares[i].style){
-    document.getElementById("square" + i).style
-  }
-}
+setInterval(CreateSquare, 200);

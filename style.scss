@@ -1,25 +1,52 @@
-*{
+* {
   color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
-  
 }
-body{
+body {
   background-color: black;
   position: static;
 
-  *{
+  * {
     z-index: 2;
   }
 }
 
-#animation-zone{
+#animation-zone {
   position: absolute;
   width: 100vw;
   height: 100vh;
   top: 0;
   left: 0;
   z-index: -1;
+
+ 
+  div {
+    position: absolute;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    transition: 5s;
+    animation: Spin 5s linear infinite;
+    opacity: 0;
+  }
+  
+}
+
+@keyframes Spin {
+  0% {
+    opacity: 0;
+    transform: translateY(0px) rotate(0deg) scale(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-150px) rotate(180deg) scale(1);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-300px) rotate(360deg) scale(0);
+    
+  }
 }
