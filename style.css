@@ -28,48 +28,27 @@ body * {
 #animation-zone div {
   position: absolute;
   display: inline-block;
-  width: 50px;
-  height: 50px;
+  width: 20px;
+  height: 20px;
   -webkit-transition: 5s;
   transition: 5s;
-  -webkit-animation: Spin 5s linear infinite;
-          animation: Spin 5s linear infinite;
+  -webkit-animation: Animator 5s linear infinite;
+          animation: Animator 5s linear infinite;
   opacity: 0;
 }
 
-@-webkit-keyframes Spin {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(0px) rotate(0deg) scale(0);
-            transform: translateY(0px) rotate(0deg) scale(0);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateY(-150px) rotate(180deg) scale(1);
-            transform: translateY(-150px) rotate(180deg) scale(1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-300px) rotate(360deg) scale(0);
-            transform: translateY(-300px) rotate(360deg) scale(0);
-  }
+#animation-zone div:hover {
+  width: 100px;
+  height: 100px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-@keyframes Spin {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(0px) rotate(0deg) scale(0);
-            transform: translateY(0px) rotate(0deg) scale(0);
-  }
-  50% {
-    opacity: 1;
-    -webkit-transform: translateY(-150px) rotate(180deg) scale(1);
-            transform: translateY(-150px) rotate(180deg) scale(1);
-  }
-  100% {
-    opacity: 0;
-    -webkit-transform: translateY(-300px) rotate(360deg) scale(0);
-            transform: translateY(-300px) rotate(360deg) scale(0);
-  }
+#specialise {
+  position: fixed;
+  width: 400px;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 1px solid red;
 }
 /*# sourceMappingURL=style.css.map */

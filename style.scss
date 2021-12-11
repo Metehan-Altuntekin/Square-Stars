@@ -26,27 +26,30 @@ body {
   div {
     position: absolute;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 20px;
+    height: 20px;
     transition: 5s;
-    animation: Spin 5s linear infinite;
+    animation: Animator 5s linear infinite;
     opacity: 0;
+
+    &:hover{
+      width: 100px;
+      height: 100px;
+      transition: 1s;
+    }
   }
   
 }
 
-@keyframes Spin {
-  0% {
-    opacity: 0;
-    transform: translateY(0px) rotate(0deg) scale(0);
-  }
-  50% {
-    opacity: 1;
-    transform: translateY(-150px) rotate(180deg) scale(1);
-  }
-  100%{
-    opacity: 0;
-    transform: translateY(-300px) rotate(360deg) scale(0);
-    
+#specialise{
+  position:fixed;
+  width: 400px;
+  backdrop-filter: blur(3px);
+  border: 1px solid red;
+
+  #size-input{
+
   }
 }
+
+
