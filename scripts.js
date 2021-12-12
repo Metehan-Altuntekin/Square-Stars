@@ -1,4 +1,21 @@
 const size = () => {return(document.getElementById("size-input").value + "px")};  //This is the most efficient way that i could find to read value of an input
+const speed = () => {return(document.getElementById("speed-input").value)};
+
+const rangeInputs = document.querySelectorAll('input[type="range"');
+const numberInputs = document.querySelectorAll('input[type="number"');
+
+rangeInputs.forEach(SyncInputs);
+numberInputs.forEach(SyncInputs);
+function SyncInputs(item,index,array){
+  array[index].addEventListener("input", function(){
+    if(array == rangeInputs){
+      numberInputs[index].value = item.value
+    }
+    if (array == numberInputs) {
+      rangeInputs[index].value = item.value;
+    }
+  })
+}
 
 document.getElementById("animation-css").innerHTML = 
 '@keyframes Animator {' +
@@ -10,14 +27,14 @@ document.getElementById("animation-css").innerHTML =
     'opacity: 1;' +
   '}' +
   '50% {' +
-    'transform: translateY(-150px) rotate(180deg) scale(1);' +
+    'transform: translateY(-150px) rotate(180deg) scale(0.5);' +
   '}' +
   '90%{' +
     'opacity: 1;' +
   '}' +
   '100%{' +
     'opacity: 0;' +
-    'transform: translateY(-300px) rotate(360deg) scale(0);' +
+    'transform: translateY(-300px) rotate(360deg) scale(1);' +
     
   '}' +
 '}'
@@ -33,27 +50,25 @@ function RandomHex(size) {             //Create a random hexadecimal for request
   }
   return (result);
 }
-
-function RandomPercentage() {
-  let a = Math.floor(Math.random() * 100).toString();
-  return (a + "%")
-}
+const RandomPercentage = () => {return(Math.floor(Math.random() * 100).toString() + "%");}
 
 function CreateSquare() {
   const zone = document.getElementById("animation-zone");
   const square = document.createElement("div");
 
-  square.style.backgroundColor = RandomHex(3);
+  square.style.backgroundColor = RandomHex(6);
   square.style.top = RandomPercentage();
   square.style.left = RandomPercentage();
   
   square.style.width = size();
   square.style.height = size();
+
+  square.style.animation = "Animator " + speed() + "s linear infinite";
   zone.appendChild(square);
 
   setTimeout(() => {
     square.remove();
-  }, 5000)
+  }, speed() * 1000)
 }
 
 setInterval(CreateSquare, 10);
