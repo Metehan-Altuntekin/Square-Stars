@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 * {
   color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 body {
   background-color: black;
@@ -57,41 +60,65 @@ body {
       outline: none;
     }
   }
-  label[for="size-input"] {
-    grid-column: 1;
-  }
-  #size-input2 {
-    grid-column: 4;
-    grid-row: 1;
-  }
-  #size-input {
-    grid-row: 1;
-    grid-column: 2/4;
-  }
-  #speed-input {
-    grid-row: 2;
-    grid-column: 2/4;
-    //transform: rotate(180deg);
 
+  label{
+    font-size: 16px;
+    font-weight: 300;
+    &[for="size-input"] {
+      grid-column: 1;
+    }
+    label[for="speed-input"] {
+      grid-row: 2;
+      grid-column: 1;
+    }
+    label[for="density-input"]{
+      grid-row: 3;
+      grid-column: 1;
+    }
   }
-  #speed-input2{
-    grid-row: 2;
-    grid-column: 4;
-  }
-  label[for="speed-input"] {
-    grid-row: 2;
-    grid-column: 1;
-  }
+  input{
+    
+    &[type="range"]{
+      
+      height: 10px;
+      -webkit-appearance: none;
+      margin: 10px 0;
+      width: 100%;
+      background-color: hsla(0, 0%, 0%, 0);
+      &#size-input {
+        grid-row: 1;
+        grid-column: 2/4;
+      }
+      &#speed-input {
+        grid-row: 2;
+        grid-column: 2/4;
+        //transform: rotate(180deg);
+      }
+      &#density-input{
+        grid-row: 3;
+        grid-column: 2/4;
+      }
+    }
+    &[type="number"]{
+
+      &#size-input2 {
+        grid-column: 4;
+        grid-row: 1;
+      }
+      &#speed-input2{
+        grid-row: 2;
+        grid-column: 4;
+      }
+      &#density-input2{
+        grid-row: 3;
+        grid-column: 4;
+      }
+    }
+
+  }    
 
 }
 
-input[type="range"] {
-  height: 10px;
-  -webkit-appearance: none;
-  margin: 10px 0;
-  width: 100%;
-  background-color: hsla(0, 0%, 0%, 0);
-}
 input[type="range"]:focus {
   outline: none;
 }

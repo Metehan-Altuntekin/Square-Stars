@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Random Squares Animation</title>
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <style id="animation-css"></style> <!-- Filled by Script-->
 </head>
@@ -14,11 +14,14 @@
   <div id="animation-zone"></div>
   <div id="specialise">
     <label for="size-input">Size</label>
-    <input type="range" name="size" id="size-input" min="1" max="250" value="10" step="2" >
-    <input type="number" name="size" id="size-input2" value="5" step="2">
+    <input type="range" name="size" id="size-input" min="2" max="100" value="10" step="2">
+    <input type="number" name="size" id="size-input2" min="2" max="100" value="10" step="2">
     <label for="speed-input">Speed</label>
-    <input type="range" name="speed" id="speed-input" min="1" max="25" value="5">
-    <input type="number" name="speed" id="speed-input2" value="5">
+    <input type="range" name="speed" id="speed-input" min="1" max="25" value="20">
+    <input type="number" name="speed" id="speed-input2" value="20">
+    <label for="density-input">Density</label>
+    <input type="range" name="density" id="density-input" min="50" max="100" value="85">
+    <input type="number" name="density" id="density-input2" min="50" max="100" value="85">
   </div>
 
   <script src="scripts.js"></script>

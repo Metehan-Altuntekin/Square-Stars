@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 * {
   color: white;
   margin: 0;
@@ -5,6 +6,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -70,54 +72,81 @@ body * {
   outline: none;
 }
 
+#specialise label {
+  font-size: 16px;
+  font-weight: 300;
+}
+
 #specialise label[for="size-input"] {
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
-#specialise #size-input2 {
-  -ms-grid-column: 4;
-  grid-column: 4;
-  -ms-grid-row: 1;
-  grid-row: 1;
-}
-
-#specialise #size-input {
-  -ms-grid-row: 1;
-  grid-row: 1;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2/4;
-}
-
-#specialise #speed-input {
-  -ms-grid-row: 2;
-  grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-column: 2/4;
-}
-
-#specialise #speed-input2 {
-  -ms-grid-row: 2;
-  grid-row: 2;
-  -ms-grid-column: 4;
-  grid-column: 4;
-}
-
-#specialise label[for="speed-input"] {
+#specialise label label[for="speed-input"] {
   -ms-grid-row: 2;
   grid-row: 2;
   -ms-grid-column: 1;
   grid-column: 1;
 }
 
-input[type="range"] {
+#specialise label label[for="density-input"] {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+#specialise input[type="range"] {
   height: 10px;
   -webkit-appearance: none;
   margin: 10px 0;
   width: 100%;
   background-color: rgba(0, 0, 0, 0);
+}
+
+#specialise input[type="range"]#size-input {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+#specialise input[type="range"]#speed-input {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+#specialise input[type="range"]#density-input {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+#specialise input[type="number"]#size-input2 {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+#specialise input[type="number"]#speed-input2 {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 4;
+  grid-column: 4;
+}
+
+#specialise input[type="number"]#density-input2 {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 4;
+  grid-column: 4;
 }
 
 input[type="range"]:focus {

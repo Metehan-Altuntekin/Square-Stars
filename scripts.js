@@ -1,5 +1,14 @@
-const size = () => {return(document.getElementById("size-input").value + "px")};  //This is the most efficient way that i could find to read value of an input
-const speed = () => {return(document.getElementById("speed-input").value)};
+const size = () => {return(document.getElementById("size-input").value + "px")};  //This is the most efficient way that i could find to read value of an input rapidly
+const speed = () => {return((document.getElementById("speed-input").max) - (document.getElementById("speed-input").value) + 1)};
+const density = () => {return(1000 - (document.getElementById("density-input").value * 10))}
+
+document.getElementById("density-input").addEventListener("input", function(){  //Need to kill the interval and then start again for density change
+  console.log(density());
+  clearInterval(cycle);
+  cycle = setInterval(CreateSquare, density());
+});
+
+
 
 const rangeInputs = document.querySelectorAll('input[type="range"');
 const numberInputs = document.querySelectorAll('input[type="number"');
@@ -71,4 +80,4 @@ function CreateSquare() {
   }, speed() * 1000)
 }
 
-setInterval(CreateSquare, 10);
+var cycle = setInterval(CreateSquare, density());
