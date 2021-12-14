@@ -38,9 +38,10 @@ body {
 
 #specialise {
   position: fixed;
-  width: 400px;
+  width: 500px;
   backdrop-filter: blur(3px);
-  border: 1px solid red;
+  box-shadow: 1px 1px 100px rgba($color: yellow, $alpha: 0.15), -1px -1px 100px rgba($color: yellow, $alpha: 0.15);
+  border-radius: 3px;
   left: 50%;
   bottom: 0px;
   transform: translate(-50%);
@@ -49,6 +50,9 @@ body {
   grid-template-rows: auto auto auto auto;
   justify-content: center;
   align-items: center;
+  *{
+    margin: 8px;
+  }
   label{
     padding-left: 10px;
     
@@ -126,7 +130,6 @@ input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 4px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 2px 2px 4px #000000;
   background: #e01071;
   border-radius: 15px;
