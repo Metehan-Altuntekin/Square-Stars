@@ -1,0 +1,208 @@
+#specialiser {
+  position: fixed;
+  width: 500px;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border-radius: 3px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 20% 30% 30% 20%;
+      grid-template-columns: 20% 30% 30% 20%;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.5;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#specialiser:hover {
+  opacity: 1;
+  -webkit-transition: 0s;
+  transition: 0s;
+  -webkit-box-shadow: 1px 1px 100px rgba(255, 255, 0, 0.15), -1px -1px 100px rgba(255, 255, 0, 0.15);
+          box-shadow: 1px 1px 100px rgba(255, 255, 0, 0.15), -1px -1px 100px rgba(255, 255, 0, 0.15);
+}
+
+#specialiser * {
+  margin: 8px;
+}
+
+#specialiser button {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+  background-color: transparent;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#specialiser button div {
+  background-color: white;
+  width: 40px;
+  height: 3px;
+  margin: 0;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  left: 0px;
+}
+
+#specialiser button div.left {
+  -webkit-transform: rotate(15deg) translateX(1px);
+          transform: rotate(15deg) translateX(1px);
+}
+
+#specialiser button div.right {
+  -webkit-transform: rotate(-15deg) translateX(-1px);
+          transform: rotate(-15deg) translateX(-1px);
+}
+
+#specialiser label {
+  padding-left: 10px;
+}
+
+#specialiser input[type="number"]:focus {
+  border: none;
+  outline: none;
+}
+
+#specialiser label {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+#specialiser label[for="size-input"] {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+#specialiser label label[for="speed-input"] {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+#specialiser label label[for="density-input"] {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+#specialiser input[type="range"] {
+  height: 10px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#specialiser input[type="range"]#size-input {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+#specialiser input[type="range"]#speed-input {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+#specialiser input[type="range"]#density-input {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2/4;
+}
+
+#specialiser input[type="number"]#size-input2 {
+  -ms-grid-column: 4;
+  grid-column: 4;
+  -ms-grid-row: 2;
+  grid-row: 2;
+}
+
+#specialiser input[type="number"]#speed-input2 {
+  -ms-grid-row: 3;
+  grid-row: 3;
+  -ms-grid-column: 4;
+  grid-column: 4;
+}
+
+#specialiser input[type="number"]#density-input2 {
+  -ms-grid-row: 4;
+  grid-row: 4;
+  -ms-grid-column: 4;
+  grid-column: 4;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  -webkit-box-shadow: 2px 2px 4px #000000;
+          box-shadow: 2px 2px 4px #000000;
+  background: #e01071;
+  border-radius: 15px;
+  border: 1px solid #000000;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #e01071;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-box-shadow: 2px 2px 4px #000000;
+          box-shadow: 2px 2px 4px #000000;
+  border: 1px solid #000000;
+  height: 16px;
+  width: 8px;
+  border-radius: 3px;
+  background: #c9dfff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+
+input[type="number"] {
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-align: center;
+}
+/*# sourceMappingURL=specialiser.css.map */
