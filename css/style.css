@@ -42,15 +42,15 @@ body * {
 #specialise {
   position: fixed;
   width: 500px;
+  left: 50%;
+  bottom: 0px;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
   -webkit-box-shadow: 1px 1px 100px rgba(255, 255, 0, 0.15), -1px -1px 100px rgba(255, 255, 0, 0.15);
           box-shadow: 1px 1px 100px rgba(255, 255, 0, 0.15), -1px -1px 100px rgba(255, 255, 0, 0.15);
   border-radius: 3px;
-  left: 50%;
-  bottom: 0px;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 30% 30% 20%;
@@ -63,6 +63,15 @@ body * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  opacity: 0.1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+#specialise:hover {
+  opacity: 1;
+  -webkit-transition: 0s;
+  transition: 0s;
 }
 
 #specialise * {

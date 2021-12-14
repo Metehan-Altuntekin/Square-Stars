@@ -39,17 +39,26 @@ body {
 #specialise {
   position: fixed;
   width: 500px;
-  backdrop-filter: blur(3px);
-  box-shadow: 1px 1px 100px rgba($color: yellow, $alpha: 0.15), -1px -1px 100px rgba($color: yellow, $alpha: 0.15);
-  border-radius: 3px;
   left: 50%;
   bottom: 0px;
   transform: translate(-50%);
+
+  backdrop-filter: blur(3px);
+  box-shadow: 1px 1px 100px rgba($color: yellow, $alpha: 0.15), -1px -1px 100px rgba($color: yellow, $alpha: 0.15);
+  border-radius: 3px;
+  
   display: grid;
   grid-template-columns: 20% 30% 30% 20%;
   grid-template-rows: auto auto auto auto;
   justify-content: center;
   align-items: center;
+
+  opacity: 0.1;
+  transition: 1s;
+  &:hover{
+    opacity: 1;
+    transition: 0s;
+  }
   *{
     margin: 8px;
   }
