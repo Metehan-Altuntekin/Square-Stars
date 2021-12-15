@@ -8,10 +8,6 @@ document.getElementById("density-input").addEventListener("input", function(){  
   cycle = setInterval(CreateSquare, density());
 });
 
-
-
-
-
 document.getElementById("animation-css").innerHTML = 
 '@keyframes Animator {' +
   '0% {' + 
