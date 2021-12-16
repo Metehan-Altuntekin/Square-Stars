@@ -209,4 +209,18 @@ input[type="number"] {
   color: white;
   text-align: center;
 }
+
+@media (max-width: 500px) {
+  #specialiser {
+    width: 100%;
+    -ms-grid-columns: auto auto auto auto;
+        grid-template-columns: auto auto auto auto;
+  }
+  #specialiser * {
+    font-size: 12px;
+  }
+  #specialiser label {
+    padding: 0;
+  }
+}
 /*# sourceMappingURL=specialiser.css.map */

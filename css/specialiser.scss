@@ -164,3 +164,20 @@ input[type="number"]{
 }
 
 
+@media (max-width: 500px){
+  #specialiser{
+    width: 100%;
+
+    grid-template-columns: auto auto auto auto;
+    *{
+      font-size: 12px;
+    }
+    label{
+      padding: 0;
+      
+    }
+    input{
+
+    }
+  }
+}
