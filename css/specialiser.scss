@@ -9,7 +9,7 @@
   border-radius: 3px;
   
   display: grid;
-  grid-template-columns: 20% 30% 30% 20%;
+  grid-template-columns: max-content 30% 30% min-content;
   grid-template-rows: auto auto auto auto auto auto auto;
   justify-content: center;
   align-items: center;
@@ -167,17 +167,19 @@ input[type="number"]{
 @media (max-width: 500px){
   #specialiser{
     width: 100%;
+  }
+}
 
-    grid-template-columns: auto auto auto auto;
+@media (max-width: 300px) {
+  #specialiser{
+    grid-template-columns: max-content auto auto min-content;
     *{
       font-size: 12px;
+      margin: 1px;
+      padding: 1px;
     }
     label{
-      padding: 0;
-      
-    }
-    input{
-
+      padding-left: 4px;
     }
   }
 }

@@ -10,8 +10,9 @@
   border-radius: 3px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 20% 30% 30% 20%;
-      grid-template-columns: 20% 30% 30% 20%;
+  -ms-grid-columns: max-content 30% 30% min-content;
+      grid-template-columns: -webkit-max-content 30% 30% -webkit-min-content;
+      grid-template-columns: max-content 30% 30% min-content;
   -ms-grid-rows: auto auto auto auto auto auto auto;
       grid-template-rows: auto auto auto auto auto auto auto;
   -webkit-box-pack: center;
@@ -213,14 +214,22 @@ input[type="number"] {
 @media (max-width: 500px) {
   #specialiser {
     width: 100%;
-    -ms-grid-columns: auto auto auto auto;
-        grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media (max-width: 300px) {
+  #specialiser {
+    -ms-grid-columns: max-content auto auto min-content;
+        grid-template-columns: -webkit-max-content auto auto -webkit-min-content;
+        grid-template-columns: max-content auto auto min-content;
   }
   #specialiser * {
     font-size: 12px;
+    margin: 1px;
+    padding: 1px;
   }
   #specialiser label {
-    padding: 0;
+    padding-left: 4px;
   }
 }
 /*# sourceMappingURL=specialiser.css.map */
